@@ -1,11 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import bodyparser from "body-parser";
 import { router } from "./router/main.js";
 const app = express();
 const PORT = 3000;
-app.use(bodyparser.json());
 app.use(express.json());
 // console.log(router);
 app.get("/", (req, res) => {
