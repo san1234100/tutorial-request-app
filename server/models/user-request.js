@@ -43,10 +43,17 @@ export const getAllRequests = async () => {
   
   export const updateDataById = async (id, data) => {
     try {
-      const result = await tutorialRequestModel.updateOne({_id:id},data);
-      return result
+      return  await tutorialRequestModel.findOneAndUpdate({_id:id},data,{new: true});
   } catch (err) {
       throw err;
     }
   };
-  
+ 
+  export const deleteDataById = async (id) => {
+    try {
+      return await tutorialRequestModel.deleteOne({ _id: id });
+     
+  } catch (err) {
+      throw err;
+    }
+  };
