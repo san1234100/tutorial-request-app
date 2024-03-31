@@ -14,11 +14,12 @@ router.post("/create", async (req, res) => {
   const data = {
     technology: "tooling",
     title: "Github tutorials",
+    desc: "Learn github to work with an team",
     created_at: new Date(),
   };
   try {
     const result = await createTutorialRequest(data);
-    console.log(result);
+    // console.log(result);
     res.status(200);
     res.json(res.body);
   } catch (err) {
@@ -43,6 +44,7 @@ router.put("/requests/:id", async (req, res) => {
     const data = {
       technology: "java",
       title: "Java tutorials",
+      desc: "Learn github to work with an team",
       created_at: new Date(),
     };
     if (docId) {

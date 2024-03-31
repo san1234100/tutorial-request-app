@@ -12,6 +12,10 @@ const tutorialRequest = new Schema({
     type: String,
     required: true,
   },
+  desc: {
+    type: String,
+    required: true,
+  },
   created_at: {
     type: Date,
     required: true,
