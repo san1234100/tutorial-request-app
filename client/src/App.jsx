@@ -1,13 +1,12 @@
-import TheNavbar from "./components/TheNavbar"
-
+import { Outlet } from "react-router-dom";
+import TheNavbar from "./components/TheNavbar";
 
 function App() {
-
   return (
     <>
-<TheNavbar/>   
+     <h1>Hello </h1>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
