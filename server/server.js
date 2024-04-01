@@ -1,10 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from 'cors'
 import { router } from "./router/main.js";
 const app = express();
 const PORT = 3000;
 app.use(express.json());
+app.use(cors())
 // console.log(router);
 app.get("/", (req, res) => {
   res.send("Welcome to express js");
