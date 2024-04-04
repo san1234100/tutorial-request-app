@@ -12,14 +12,13 @@ router.get("/", (req, res) => {
 });
 router.post("/create", async (req, res) => {
   const data = {
-    technology: "Java",
-    title: "Java tutorials",
-    desc: "Learn java to build an application",
+    technology: req.body.technology,
+    title: req.body.title,
+    desc: req.body.desc,
     created_at: new Date(),
   };
   try {
     const result = await createTutorialRequest(data);
-    // console.log(result);
     res.status(200);
     res.json(res.body);
   } catch (err) {
@@ -30,7 +29,6 @@ router.post("/create", async (req, res) => {
 router.get("/requests", async (req, res) => {
   try {
     const result = await getAllRequests();
-    console.log(result);
     res.status(200);
     res.json(result);
   } catch (err) {
