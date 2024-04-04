@@ -12,9 +12,9 @@ router.get("/", (req, res) => {
 });
 router.post("/create", async (req, res) => {
   const data = {
-    technology: "tooling",
-    title: "Github tutorials",
-    desc: "Learn github to work with an team",
+    technology: "Java",
+    title: "Java tutorials",
+    desc: "Learn java to build an application",
     created_at: new Date(),
   };
   try {
